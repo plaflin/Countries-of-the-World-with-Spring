@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Countries of the World with Spring.iml" filepath="$PROJECT_DIR$/.idea/modules/Countries of the World with Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring.iml" filepath="$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring_main.iml" group="Countries_of_the_World_with_Spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Countries_of_the_World_with_Spring_test.iml" group="Countries_of_the_World_with_Spring" />
+    </modules>
+  </component>
+</project>

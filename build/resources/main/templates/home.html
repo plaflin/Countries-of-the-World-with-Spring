@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>    
+
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title>Countries of the World with Spring | Home</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container">
+                <a th:href="@{/}" class="brand-logo">Countries of the World</a>
+                <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="active"><a th:href="@{/}">Explore</a></li>
+                    <li><a th:href="@{/}">Countries by Name</a></li>
+                    <li><a th:href="@{/byPopulation}">Countries by Population</a></li>
+                </ul>
+                <ul id="mobile-nav" class="side-nav">
+                    <li class="active"><a th:href="@{/}">Explore</a></li>
+                    <li><a th:href="@{/}">Countries by Name</a></li>
+                    <li><a th:href="@{/byPopulation}">Countries by Population</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="search-bar container">
+        <div class="row">
+            <div class="col s12">
+                <form action="#" method="get">
+                    <div class="input-field">
+                        <input name="q" type="search" placeholder="Search all countries..." required="required" autocomplete="off"/>
+                        <i class="material-icons">search</i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     
+    <div class="gifs container">
+        <div class="row">
+            <div th:each="flag : ${flags}" class="col s12 l4">
+                <a th:href="@{'/country/'+${flag.countryName}}"><span  th:text="${flag.countryName}"></span>
+                    <img th:src="@{'/images/'+${flag.imageName}+'.gif'}" />                    
+                </a>
+            </div>            
+        </div>
+    </div> 
+
+<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+<script th:src="@{/app.js}"></script>
+</body>
+</html>
