@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+// This class holds the model for the country objects
 public class Country implements Comparable<Country>, Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -20,6 +21,7 @@ public class Country implements Comparable<Country>, Serializable{
 		this.officialLanguages = officalLanguages;
 	}	
 
+	// Getters and Setters follow
 	public String getCountryName() {
 		return countryName;
 	}
@@ -52,6 +54,7 @@ public class Country implements Comparable<Country>, Serializable{
 		this.officialLanguages = officialLanguages;
 	}
 
+	// Compare method to be able to alphabetize the countries
 	@Override
 	public int compareTo(Country other) {
 		return countryName.compareTo(other.getCountryName());

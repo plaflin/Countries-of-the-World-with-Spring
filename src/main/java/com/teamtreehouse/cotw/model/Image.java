@@ -1,6 +1,11 @@
 package com.teamtreehouse.cotw.model;
 
+/*
+This class holds the model for the flag objects.
+I purposefully made the name generic in case I ever wanted to do something like this again.
+*/
 public class Image {
+
 	private String imageName;
 	private int id;
 	private String countryName;	
@@ -11,28 +16,34 @@ public class Image {
 		this.setCountryName(countryName);
 	}
 
+	// Getters and setters follow
 	public String getCountryName() {
 		return countryName;
 	}
 
 	public void setCountryName(String countryName) {
-		this.countryName = countryName;
+
+	    this.countryName = countryName;
 	}
 	
 	public String getImageName() {
-		return imageName;
+
+	    return imageName;
 	}
 
 	public void setImageName(String imageName) {
-		this.imageName = imageName;
+
+	    this.imageName = imageName;
 	}
 
 	public int getId() {
-		return id;
+
+	    return id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+
+	    this.id = id;
 	}
 
 }

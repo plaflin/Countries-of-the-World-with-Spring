@@ -17,6 +17,7 @@ import com.teamtreehouse.cotw.model.Image;
 
 
 @Controller
+// This class controls the routing and grabbing the data for the web pages
 public class CountriesController {
 	
 	@Autowired
@@ -24,7 +25,8 @@ public class CountriesController {
 	
 	@Autowired
 	ImageRepository imageRepository;
-	
+
+	// Route for the home page
 	@RequestMapping("/")
 	public String home(ModelMap modelMap) {
 		List<Country> countries = countriesRepository.countriesByAlpha();
@@ -33,9 +35,10 @@ public class CountriesController {
 		modelMap.put("flags", flags);
 		return "home";
 	}
-	
+
+	// Route for the Country details page
 	@RequestMapping("/country/{countryName}")
-	public String gifDetails(@PathVariable String countryName, ModelMap modelMap) {
+	public String countryDetails(@PathVariable String countryName, ModelMap modelMap) {
 		Country country = countriesRepository.findByName(countryName);
 		modelMap.put("country", country);
 		Image flags = imageRepository.findByName(countryName);
@@ -44,7 +47,8 @@ public class CountriesController {
 		modelMap.put("languages", languages);
 		return "country-details";
 	}
-	
+
+	// Route for the list of countries by population
 	@RequestMapping("/byPopulation")
 	public String byPopulation(ModelMap modelMap){
 		List<Country> byPopulation = countriesRepository.countriesByPop();
